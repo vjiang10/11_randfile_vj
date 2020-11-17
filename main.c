@@ -45,6 +45,7 @@ int main() {
         printf("Error when opening; errno: %s\n", strerror(errno));
         return 0;
     }
+    close(output);
     printf("\n");
 
     printf("Reading numbers from file...\n");
@@ -60,6 +61,7 @@ int main() {
         printf("Error when opening; errno: %s\n", strerror(errno));
         return 0;
     }
+    close(randFile2);
     printf("\n");
 
     printf("Verification that written values were the same:\n");
